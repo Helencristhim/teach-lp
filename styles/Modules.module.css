@@ -4,7 +4,7 @@
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -27,8 +27,8 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
   margin-bottom: 4rem;
 }
 
@@ -160,6 +160,12 @@
   box-shadow: 0 6px 28px rgba(193, 255, 0, 0.4);
 }
 
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .modules {
     padding: 4rem 1rem;
@@ -175,6 +181,7 @@
 
   .grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .cta {
