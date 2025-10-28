@@ -54,8 +54,8 @@ export default function Footer() {
 
             <div className={styles.columnLogo}>
               <img
-                src="/images/logo-teach.png"
-                alt="TEACH Logo"
+                src="/images/logo-bettered.png"
+                alt="Bettered Tech Logo"
                 className={styles.footerLogo}
               />
             </div>
