@@ -4,23 +4,23 @@ export default function HowItWorks() {
   const steps = [
     {
       number: '01',
-      title: 'Cadastro Gratuito',
-      description: 'Crie sua conta em menos de 2 minutos e tenha acesso imediato à plataforma'
+      title: 'Entre em Contato',
+      description: 'Solicite uma apresentação personalizada para entender como o TEACH pode transformar sua instituição'
     },
     {
       number: '02',
-      title: 'Comece pelo Starter',
-      description: 'Aprenda os fundamentos de IA com 12 aulas práticas e assistência de IA integrada'
+      title: 'Análise e Proposta',
+      description: 'Receba uma proposta customizada baseada no tamanho e necessidades da sua equipe educacional'
     },
     {
       number: '03',
-      title: 'Evolua no Seu Ritmo',
-      description: 'Avance pelos módulos, complete desafios e ganhe certificados oficiais'
+      title: 'Implementação',
+      description: 'Onboarding estruturado com suporte dedicado para garantir adoção efetiva dos seus professores'
     },
     {
       number: '04',
-      title: 'Transforme Suas Aulas',
-      description: 'Aplique o conhecimento em sala, crie conteúdo com IA e impacte seus alunos'
+      title: 'Resultados Mensuráveis',
+      description: 'Acompanhe métricas de evolução, engajamento e impacto educacional através do nosso dashboard'
     }
   ];
 
@@ -29,7 +29,7 @@ export default function HowItWorks() {
       <div className={styles.container}>
         <h2 className={styles.title}>Como Funciona</h2>
         <p className={styles.subtitle}>
-          Um processo simples para transformar sua carreira educacional
+          Um processo simples para transformar sua instituição educacional
         </p>
 
         <div className={styles.steps}>
@@ -49,10 +49,10 @@ export default function HowItWorks() {
 
         <div className={styles.cta}>
           <button className={styles.ctaButton}>
-            Começar Jornada Gratuita
+            Solicitar Apresentação
           </button>
           <p className={styles.ctaNote}>
-            ✓ Sem cartão de crédito • ✓ Acesso imediato • ✓ Cancele quando quiser
+            ✓ Proposta personalizada • ✓ Suporte dedicado • ✓ ROI mensurável
           </p>
         </div>
       </div>

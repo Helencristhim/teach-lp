@@ -83,10 +83,10 @@ export default function Modules() {
 
         <div className={styles.cta}>
           <p className={styles.ctaText}>
-            Comece gratuitamente e evolua no seu ritmo
+            Invista no futuro da sua instituição educacional
           </p>
           <button className={styles.ctaButton}>
-            Iniciar Jornada Gratuita →
+            Transforme Sua Instituição →
           </button>
         </div>
       </div>

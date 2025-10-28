@@ -6,16 +6,17 @@ export default function Footer() {
       <section className={styles.finalCta}>
         <div className={styles.ctaContainer}>
           <h2 className={styles.ctaTitle}>
-            Pronto para Transformar a Educação?
+            Lidere a Revolução Educacional no Brasil
           </h2>
           <p className={styles.ctaSubtitle}>
-            Junte-se a mais de 1.000 professores que já estão revolucionando suas salas de aula com IA
+            Junte-se aos primeiros 1.000 professores que irão transformar a educação brasileira.<br />
+            Início do programa piloto: Dezembro 2025.
           </p>
           <button className={styles.ctaButton}>
-            Começar Jornada Gratuita Agora →
+            Investir em Capacitação →
           </button>
           <p className={styles.ctaNote}>
-            Acesso imediato • Sem cartão de crédito • Cancele quando quiser
+            Programa exclusivo para instituições públicas e privadas
           </p>
         </div>
       </section>

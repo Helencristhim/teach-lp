@@ -16,8 +16,8 @@ export default function Header() {
         </nav>
 
         <div className={styles.actions}>
-          <button className={styles.btnSecondary}>Entrar</button>
-          <button className={styles.btnPrimary}>Começar Agora</button>
+          <button className={styles.btnSecondary}>Fale Conosco</button>
+          <button className={styles.btnPrimary}>Solicitar Proposta</button>
         </div>
       </div>
     </header>

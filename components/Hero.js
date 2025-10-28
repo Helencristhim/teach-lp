@@ -16,16 +16,16 @@ export default function Hero() {
         </h1>
 
         <p className={styles.subtitle}>
-          Capacite 2,3 milhões de professores brasileiros com ferramentas de IA.<br />
-          Torne-se um facilitador de aprendizagem e prepare seus alunos para o futuro.
+          Junte-se aos primeiros 1.000 professores que irão transformar a educação brasileira.<br />
+          Início do programa piloto: Dezembro 2025.
         </p>
 
         <div className={styles.ctas}>
           <button className={styles.btnPrimary}>
-            ▶ Começar Jornada Gratuita
+            Capacite Seus Professores
           </button>
           <button className={styles.btnSecondary}>
-            📖 Ver Demonstração
+            📖 Solicitar Demonstração
           </button>
         </div>
 
