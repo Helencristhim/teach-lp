@@ -52,24 +52,12 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div className={styles.column}>
-              <h4 className={styles.columnTitle}>Empresa</h4>
-              <ul className={styles.links}>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <li><a href="#carreiras">Carreiras</a></li>
-              </ul>
-            </div>
-
-            <div className={styles.column}>
-              <h4 className={styles.columnTitle}>Suporte</h4>
-              <ul className={styles.links}>
-                <li><a href="#ajuda">Central de Ajuda</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#privacidade">Privacidade</a></li>
-                <li><a href="#termos">Termos de Uso</a></li>
-              </ul>
+            <div className={styles.columnLogo}>
+              <img
+                src="/images/logo-teach.png"
+                alt="TEACH Logo"
+                className={styles.footerLogo}
+              />
             </div>
           </div>
 
