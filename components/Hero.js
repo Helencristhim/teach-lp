@@ -11,30 +11,42 @@ export default function Hero() {
     <>
       <section className={styles.hero}>
         <div className={styles.container}>
-          <div className={styles.badge}>
-            ⭐ Primeira plataforma de IA para educadores no Brasil
+          <div className={styles.content}>
+            <div className={styles.badge}>
+              ⭐ Primeira plataforma de IA para educadores no Brasil
+            </div>
+
+            <h1 className={styles.title}>
+              Transforme a educação com <br />
+              <span className={styles.gradient}>Inteligência Artificial</span>
+            </h1>
+
+            <p className={styles.subtitle}>
+              Junte-se aos primeiros 1.000 professores que irão transformar a educação brasileira.<br />
+              Início do programa piloto: Dezembro 2025.
+            </p>
+
+            <div className={styles.ctas}>
+              <button className={styles.btnPrimary} onClick={() => setIsModalOpen(true)}>
+                Capacite Seus Professores
+              </button>
+              <button className={styles.btnSecondary} onClick={() => setIsModalOpen(true)}>
+                📖 Solicitar Demonstração
+              </button>
+            </div>
           </div>
 
-          <h1 className={styles.title}>
-            Transforme a educação com <br />
-            <span className={styles.gradient}>Inteligência Artificial</span>
-          </h1>
-
-          <p className={styles.subtitle}>
-            Junte-se aos primeiros 1.000 professores que irão transformar a educação brasileira.<br />
-            Início do programa piloto: Dezembro 2025.
-          </p>
-
-          <div className={styles.ctas}>
-            <button className={styles.btnPrimary} onClick={() => setIsModalOpen(true)}>
-              Capacite Seus Professores
-            </button>
-            <button className={styles.btnSecondary} onClick={() => setIsModalOpen(true)}>
-              📖 Solicitar Demonstração
-            </button>
+          <div className={styles.imageWrapper}>
+            <img
+              src="/images/hero-teacher.jpg"
+              alt="Professora utilizando IA com alunos"
+              className={styles.heroImage}
+            />
           </div>
+        </div>
 
-        <div className={styles.stats}>
+        <div className={styles.statsContainer}>
+          <div className={styles.stats}>
           <div className={styles.stat}>
             <div className={styles.statIcon}>👥</div>
             <div className={styles.statContent}>
@@ -59,8 +71,8 @@ export default function Hero() {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+        </div>
+      </section>
 
     <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </>
