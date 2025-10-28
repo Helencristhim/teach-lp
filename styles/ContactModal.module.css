@@ -198,6 +198,26 @@
   font-weight: 600;
 }
 
+.errorMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.errorMessage .successIcon {
+  background: #EF4444;
+  color: white;
+}
+
+.errorMessage p {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
 @media (max-width: 768px) {
   .modal {
     padding: 2rem;

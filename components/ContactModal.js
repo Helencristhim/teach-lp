@@ -26,25 +26,51 @@ export default function ContactModal({ isOpen, onClose }) {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Aqui você pode integrar com seu backend ou serviço de email
-    // Por enquanto, vou simular um envio
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitMessage('Obrigado! Entraremos em contato em breve.');
+    try {
+      // Enviar dados para o webhook do CRM
+      const response = await fetch('https://functions-api.clint.digital/endpoints/integration/webhook/8ee671f1-3ba0-4da1-a47a-0e0245b43106', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          nome: formData.nome,
+          instituicao: formData.instituicao,
+          telefone: formData.telefone,
+          email: formData.email,
+          numProfessores: formData.numProfessores
+        })
+      });
 
-      // Limpar formulário após 2 segundos e fechar modal
+      if (response.ok) {
+        setIsSubmitting(false);
+        setSubmitMessage('Obrigado! Entraremos em contato em breve.');
+
+        // Limpar formulário após 2 segundos e fechar modal
+        setTimeout(() => {
+          setFormData({
+            nome: '',
+            instituicao: '',
+            telefone: '',
+            email: '',
+            numProfessores: ''
+          });
+          setSubmitMessage('');
+          onClose();
+        }, 2000);
+      } else {
+        throw new Error('Erro ao enviar formulário');
+      }
+    } catch (error) {
+      console.error('Erro ao enviar:', error);
+      setIsSubmitting(false);
+      setSubmitMessage('Erro ao enviar. Tente novamente.');
+
+      // Limpar mensagem de erro após 3 segundos
       setTimeout(() => {
-        setFormData({
-          nome: '',
-          instituicao: '',
-          telefone: '',
-          email: '',
-          numProfessores: ''
-        });
         setSubmitMessage('');
-        onClose();
-      }, 2000);
-    }, 1000);
+      }, 3000);
+    }
   };
 
   if (!isOpen) return null;
@@ -62,8 +88,8 @@ export default function ContactModal({ isOpen, onClose }) {
         </p>
 
         {submitMessage ? (
-          <div className={styles.successMessage}>
-            <span className={styles.successIcon}>✓</span>
+          <div className={submitMessage.includes('Erro') ? styles.errorMessage : styles.successMessage}>
+            <span className={styles.successIcon}>{submitMessage.includes('Erro') ? '✕' : '✓'}</span>
             <p>{submitMessage}</p>
           </div>
         ) : (
