@@ -1,6 +1,11 @@
+'use client';
+
+import { useState } from 'react';
 import styles from '../styles/HowItWorks.module.css';
+import ContactModal from './ContactModal';
 
 export default function HowItWorks() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const steps = [
     {
       number: '01',
@@ -25,8 +30,9 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section className={styles.howItWorks} id="como-funciona">
-      <div className={styles.container}>
+    <>
+      <section className={styles.howItWorks} id="como-funciona">
+        <div className={styles.container}>
         <h2 className={styles.title}>Como Funciona</h2>
         <p className={styles.subtitle}>
           Um processo simples para transformar sua instituição educacional
@@ -48,7 +54,7 @@ export default function HowItWorks() {
         </div>
 
         <div className={styles.cta}>
-          <button className={styles.ctaButton}>
+          <button className={styles.ctaButton} onClick={() => setIsModalOpen(true)}>
             Solicitar Apresentação
           </button>
           <p className={styles.ctaNote}>
@@ -57,5 +63,8 @@ export default function HowItWorks() {
         </div>
       </div>
     </section>
+
+    <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+    </>
   );
 }

@@ -1,6 +1,12 @@
+'use client';
+
+import { useState } from 'react';
 import styles from '../styles/Footer.module.css';
+import ContactModal from './ContactModal';
 
 export default function Footer() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <>
       <section className={styles.finalCta}>
@@ -12,7 +18,7 @@ export default function Footer() {
             Junte-se aos primeiros 1.000 professores que irão transformar a educação brasileira.<br />
             Início do programa piloto: Dezembro 2025.
           </p>
-          <button className={styles.ctaButton}>
+          <button className={styles.ctaButton} onClick={() => setIsModalOpen(true)}>
             Investir em Capacitação →
           </button>
           <p className={styles.ctaNote}>
@@ -80,6 +86,8 @@ export default function Footer() {
           </div>
         </div>
       </footer>
+
+      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </>
   );
 }

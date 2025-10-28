@@ -1,6 +1,11 @@
+'use client';
+
+import { useState } from 'react';
 import styles from '../styles/Modules.module.css';
+import ContactModal from './ContactModal';
 
 export default function Modules() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const modules = [
     {
       id: 'starter',
@@ -57,8 +62,9 @@ export default function Modules() {
   ];
 
   return (
-    <section className={styles.modules} id="modulos">
-      <div className={styles.container}>
+    <>
+      <section className={styles.modules} id="modulos">
+        <div className={styles.container}>
         <h2 className={styles.title}>
           4 Módulos Progressivos de Aprendizagem
         </h2>
@@ -85,11 +91,14 @@ export default function Modules() {
           <p className={styles.ctaText}>
             Invista no futuro da sua instituição educacional
           </p>
-          <button className={styles.ctaButton}>
+          <button className={styles.ctaButton} onClick={() => setIsModalOpen(true)}>
             Transforme Sua Instituição →
           </button>
         </div>
       </div>
     </section>
+
+    <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+    </>
   );
 }

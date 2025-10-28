@@ -1,33 +1,38 @@
 'use client';
 
+import { useState } from 'react';
 import styles from '../styles/Hero.module.css';
+import ContactModal from './ContactModal';
 
 export default function Hero() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
-    <section className={styles.hero}>
-      <div className={styles.container}>
-        <div className={styles.badge}>
-          ⭐ Primeira plataforma de IA para educadores no Brasil
-        </div>
+    <>
+      <section className={styles.hero}>
+        <div className={styles.container}>
+          <div className={styles.badge}>
+            ⭐ Primeira plataforma de IA para educadores no Brasil
+          </div>
 
-        <h1 className={styles.title}>
-          Transforme a educação com <br />
-          <span className={styles.gradient}>Inteligência Artificial</span>
-        </h1>
+          <h1 className={styles.title}>
+            Transforme a educação com <br />
+            <span className={styles.gradient}>Inteligência Artificial</span>
+          </h1>
 
-        <p className={styles.subtitle}>
-          Junte-se aos primeiros 1.000 professores que irão transformar a educação brasileira.<br />
-          Início do programa piloto: Dezembro 2025.
-        </p>
+          <p className={styles.subtitle}>
+            Junte-se aos primeiros 1.000 professores que irão transformar a educação brasileira.<br />
+            Início do programa piloto: Dezembro 2025.
+          </p>
 
-        <div className={styles.ctas}>
-          <button className={styles.btnPrimary}>
-            Capacite Seus Professores
-          </button>
-          <button className={styles.btnSecondary}>
-            📖 Solicitar Demonstração
-          </button>
-        </div>
+          <div className={styles.ctas}>
+            <button className={styles.btnPrimary} onClick={() => setIsModalOpen(true)}>
+              Capacite Seus Professores
+            </button>
+            <button className={styles.btnSecondary} onClick={() => setIsModalOpen(true)}>
+              📖 Solicitar Demonstração
+            </button>
+          </div>
 
         <div className={styles.stats}>
           <div className={styles.stat}>
@@ -56,5 +61,8 @@ export default function Hero() {
         </div>
       </div>
     </section>
+
+    <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+    </>
   );
 }
