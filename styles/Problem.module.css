@@ -1,0 +1,182 @@
+.problem {
+  padding: 6rem 2rem;
+  background: var(--bg-dark);
+  color: var(--text-light);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 4rem;
+}
+
+.comparison {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.cardNegative,
+.cardPositive {
+  padding: 2.5rem;
+  border-radius: 20px;
+  transition: transform 0.3s;
+}
+
+.cardNegative {
+  background: rgba(239, 68, 68, 0.1);
+  border: 2px solid rgba(239, 68, 68, 0.3);
+}
+
+.cardPositive {
+  background: rgba(193, 255, 0, 0.1);
+  border: 2px solid var(--color-primary);
+  position: relative;
+}
+
+.cardPositive::before {
+  content: 'RECOMENDADO';
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: var(--color-primary);
+  color: var(--bg-dark);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.cardNegative:hover,
+.cardPositive:hover {
+  transform: translateY(-5px);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+.cardHeader h3 {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.list li {
+  padding-left: 1.5rem;
+  position: relative;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.05rem;
+}
+
+.list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: inherit;
+}
+
+.highlight {
+  background: linear-gradient(135deg, rgba(43, 127, 230, 0.2) 0%, rgba(0, 212, 170, 0.2) 100%);
+  border: 2px solid rgba(193, 255, 0, 0.3);
+  border-radius: 24px;
+  padding: 3rem;
+  text-align: center;
+}
+
+.highlightTitle {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+}
+
+.roles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.role {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.roleIcon {
+  font-size: 1.5rem;
+}
+
+.highlightText {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+.highlightText strong {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .problem {
+    padding: 4rem 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .comparison {
+    grid-template-columns: 1fr;
+  }
+
+  .highlight {
+    padding: 2rem;
+  }
+
+  .highlightTitle {
+    font-size: 1.5rem;
+  }
+
+  .roles {
+    grid-template-columns: 1fr;
+  }
+}

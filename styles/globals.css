@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  /* Bettered Colors */
+  --color-primary: #C1FF00; /* Verde limão neon */
+  --color-primary-dark: #9FD900;
+
+  /* TEACH Colors */
+  --color-secondary: #2B7FE6; /* Azul TEACH */
+  --color-secondary-dark: #1E5BB8;
+  --color-tertiary: #00D4AA; /* Verde/turquesa */
+
+  /* Backgrounds */
+  --bg-light: #F5F8FC; /* Azul claro suave */
+  --bg-dark: #0A1628; /* Azul escuro quase preto */
+  --bg-card: #FFFFFF;
+
+  /* Text */
+  --text-primary: #0A1628;
+  --text-secondary: #64748B;
+  --text-light: #FFFFFF;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-tertiary) 100%);
+  --gradient-dark: linear-gradient(135deg, #0A1628 0%, #1A2942 100%);
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-primary);
+  background: var(--bg-light);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+p {
+  line-height: 1.6;
+}
