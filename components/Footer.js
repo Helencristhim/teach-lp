@@ -66,10 +66,10 @@ export default function Footer() {
               © 2025 TEACH. Todos os direitos reservados.
             </p>
             <div className={styles.social}>
-              <a href="#" aria-label="Instagram">📸</a>
-              <a href="#" aria-label="LinkedIn">💼</a>
-              <a href="#" aria-label="YouTube">🎥</a>
-              <a href="#" aria-label="WhatsApp">💬</a>
+              <a href="#" aria-label="Instagram">Instagram</a>
+              <a href="#" aria-label="LinkedIn">LinkedIn</a>
+              <a href="#" aria-label="YouTube">YouTube</a>
+              <a href="#" aria-label="WhatsApp">WhatsApp</a>
             </div>
           </div>
         </div>
